@@ -1,0 +1,12 @@
+.inputs {
+    display: inline-block;
+}
+
+.table {
+    width: 95%;
+    border: solid 3px;
+}
+
+.intersections {
+   border: solid 2px; 
+}
