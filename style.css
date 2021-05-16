@@ -7,10 +7,20 @@
     border: solid 3px;
 }
 
-.intersections {
-   border: solid 2px; 
-}
-
 .highlight {
     background-color: red;
+}
+
+.align {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.corner {
+    text-align: end;
+    margin-right: 1em;
 }

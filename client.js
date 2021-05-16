@@ -78,7 +78,7 @@ function newRow(){
     <td class="info">${$('#title').val()}</td>
     <td class="info">$${$('#annualSalary').val()}</td>
     <td class="info">
-    <button class="deleteBtn">Delete</button>
+    <button class="deleteBtn btn btn-secondary btn-sm"">Delete</button>
     </td>
     </tr>
     `)   
