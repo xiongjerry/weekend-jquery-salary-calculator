@@ -2,6 +2,7 @@ console.log('JS loaded');
 
 let employees = [] // create array holding box to be pushed my objects
 
+
 // let employee = {} // create empty object to put values into and push into array
 
 $(document).ready(readyNow)
@@ -17,19 +18,29 @@ function readyNow(){
                 //Click Listeners
 $('#submitBtn').on('click', addEmployee)
 
+
 // Step 2: Make a function that takes the input into a new row in the table on click
 
 $('#submitBtn').on('click', newRow)
 
 $('#submitBtn').on('click', clearInput) // resets input
 
+
 // Step 3: Add a function to the delete button to empty the current row
 
 $('#output').on('click', '.deleteBtn', deleteRow)
 
+
 // Step 4: Implement a function to calculate the monthly total of each employee
 
-.ready(monthlyCosts)
+$('#submitBtn').on('click', monthlyCosts)
+
+
+// Step 5: manipulate the function to highlight monthly cost if > 20,000
+
+
+
+console.log(employees[0]); // testing for objects in array
 
 } // end readyNow
 
@@ -88,3 +99,18 @@ function deleteRow(){
 
 
 // function to calculate monthly costs
+function monthlyCosts(){
+    let totalSalary = 0;
+    let monthly = 0;
+    for (i = 0; i < employees.length; i++) {
+       totalSalary += parseInt(employees[i].annualSalary)
+    }
+    monthly = totalSalary / 12;
+    
+    $('#monthlyTotal').text(`Monthly Total: $${monthly}`) // updates DOM of monthly prices
+
+    if (monthly > 20000) {
+        $('#monthlyTotal').addClass('highlight')
+    }
+    return console.log(monthly);
+}

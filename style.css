@@ -10,3 +10,7 @@
 .intersections {
    border: solid 2px; 
 }
+
+.highlight {
+    background-color: red;
+}
